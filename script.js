@@ -1,4 +1,5 @@
 function mincost(arr){
+   if (arr.length <= 1) return 0;
     arr.sort((a,b)=>a-b);
     let totalCost = 0;
     while(arr.length>1){
@@ -15,11 +16,11 @@ function mincost(arr){
 }
  function rearr(a){
         if(a.length<3) return ;
-        for(let i=0; i<arr.length-1;i++){
+        for(let i=0; i<a.length-1;i++){
             if(a[i]>a[i+1]){
                 [a[i],a[i+1]]=[a[i+1],a[i]]
             }
-            else return;
+            else break;
         }
     }
 
